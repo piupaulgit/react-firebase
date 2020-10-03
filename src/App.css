@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.chat-holder {
+  height: calc(100vh - 155px);
+  overflow: auto;
+}

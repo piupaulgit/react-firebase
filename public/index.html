@@ -10,6 +10,16 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -26,6 +36,41 @@
     -->
     <title>React App</title>
   </head>
+  <style>
+    body {
+      font-family: "Roboto", sans-serif !important;
+    }
+    section {
+      min-height: 100vh;
+    }
+    .chat-content {
+      background-color: rgba(255, 255, 255, 1);
+      padding: 20px;
+      min-width: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .chat-header {
+      padding: 10px;
+      color: #fff;
+    }
+    .send-msg-box {
+      position: relative;
+    }
+    .send-msg-box svg {
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      height: 37px;
+      width: 29px;
+      font-size: 35px;
+      cursor: pointer;
+    }
+    .send-msg-box input {
+      padding-right: 45px;
+    }
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
