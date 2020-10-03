@@ -39,4 +39,37 @@
 .chat-holder {
   height: calc(100vh - 155px);
   overflow: auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.chat-holder .message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.chat-holder .message img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.chat-holder .message p {
+  padding: 10px;
+  line-height: 1;
+  font-size: 12px;
+  border-radius: 20px;
+  margin: 10px 5px;
+  margin-top: 0;
+}
+.chat-holder .message.received {
+}
+.chat-holder .message.sent {
+  flex-direction: row-reverse;
+}
+.chat-holder .message.received p {
+  background: #efe0e0;
+}
+
+.chat-holder .message.sent p {
+  background: #7fccf1;
 }

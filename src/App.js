@@ -65,15 +65,17 @@ const ChatRoom = () => {
   };
   const sendMessage = async (e) => {
     e.preventDefault();
-    const { uid, photoURL } = auth.currentUser;
-    await messageRef.add({
-      text: formValue,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      uid,
-      photoURL,
-    });
-    setFormValue("");
-    dummy.current.scrollIntoView({ behavior: "smooth" });
+    if (formValue.trim().length > 0) {
+      const { uid, photoURL } = auth.currentUser;
+      await messageRef.add({
+        text: formValue,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        uid,
+        photoURL,
+      });
+      setFormValue("");
+      dummy.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
   return (
     <div className="chat-content justify-content-between p-0">
